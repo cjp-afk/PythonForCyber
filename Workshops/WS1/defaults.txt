@@ -1,0 +1,8 @@
+admin password
+admin psswd
+admin admin
+user password
+user password123
+admin 123
+root password
+root password123

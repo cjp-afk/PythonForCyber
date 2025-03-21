@@ -3,7 +3,7 @@ import dns
 import dns.resolver
 import socket
 
-# this function checks if the IP is valid and returns the information if true
+# this function checks if the IP is valid and returns the relevant information if true
 def reverse_dns(ip):
     try:
         result = socket.gethostbyaddr(ip)
@@ -12,7 +12,7 @@ def reverse_dns(ip):
         return []
     return [result[0]] + result[1]
 
-# Resolves DNS names to IP addresses
+# Resolves DNS names to IP addresses-
 def dns_request(domain):
     try:
         result = dns.resolver.resolve(domain, 'A')
