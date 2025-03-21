@@ -1,0 +1,8 @@
+test
+admin
+dev
+login
+root
+create
+main
+www
