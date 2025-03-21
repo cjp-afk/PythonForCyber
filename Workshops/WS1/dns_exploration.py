@@ -45,4 +45,4 @@ if __name__ == '__main__':
     with open(d,"r") as f:
         dictionary = f.read().splitlines()
 
-    subdomain_search(domain, dictionary, False)
+    subdomain_search(domain, dictionary, True)
