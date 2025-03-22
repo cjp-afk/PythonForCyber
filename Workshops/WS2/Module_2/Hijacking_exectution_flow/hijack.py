@@ -16,7 +16,7 @@ def edit_path_value(reghive, regpath, targetdir):
 
     reg = winreg.ConnectRegistry(None, reghive)
     key = winreg.OpenKey(reg, regpath, 0, access=winreg.KEY_SET_VALUE)
-    winreg.SetValueEx(key, 0, winreg.REG_SZ, newpath)
+    winreg.SetValueEx(key, "Path", 0, winreg.REG_SZ, newpath)
 
 if __name__ == "__main__":
     reghive = winreg.HKEY_CURRENT_USER
