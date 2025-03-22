@@ -9,6 +9,8 @@
 <INPUT id="pass" value="Password">
 <button id="submit">Log In</button>
 <script type="text/python3">
+    host="localhost"
+    port=8443
     from browser import document,ajax
     def submit_creds(ev):
         username=document["email"].value
